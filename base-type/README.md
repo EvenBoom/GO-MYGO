@@ -68,5 +68,5 @@ var f float64
 ### 初始化
 ```
 var f float64 = 0 // f:=0.0
-var f float32 =0
+var f float32 = 0
 ```
