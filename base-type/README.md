@@ -29,7 +29,7 @@ var n uint16</br>
 var n uint32</br>
 var n uint64</br>
 ### 初始化
-var n int = 0       n:=0</br>
+>>var n int = 0       n:=0</br>
 var n int8 = 0</br>
 var n int16 = 0</br>
 var n int32 = 0</br>
