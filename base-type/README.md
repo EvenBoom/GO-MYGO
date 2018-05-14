@@ -2,14 +2,15 @@
 ## 目录（Catalog）
 1.[string](https://github.com/EvenBoom/GO-MYGO/blob/master/base-type/README.md#string)</br>
 2.[int](https://github.com/EvenBoom/GO-MYGO/blob/master/base-type/README.md#int)</br>
+3.[float](https://github.com/EvenBoom/GO-MYGO/blob/master/base-type/README.md#float)</br>
 ## string
 ### 声明
-var s string
+var s string</br>
 ### 初始化
-s="init"
+s="init"</br>
 ### 声明并初始化
 1.var s string = "init"</br>
-2.s := "init"
+2.s := "init"</br>
 ## int
 ### 分类
 int（有符号,长度取决于CPU,至少32位）</br>
