@@ -18,28 +18,24 @@ uint（无符号,长度取决于CPU,至少32位）</br>
 uint8,uint16,uint32.uint64（无符号，固定长度）</br>
 ### 声明
 var n int</br>
-----------------------------
 var n int8</br>
 var n int16</br>
 var n int32</br>
 var n int64</br>
 
 var n uint</br>
-----------------------------
 var n uint8</br>
 var n uint16</br>
 var n uint32</br>
 var n uint64</br>
 ### 初始化
 var n int = 0 or n:=0</br>
-----------------------------
 var n int8 = 0</br>
 var n int16 = 0</br>
 var n int32 = 0</br>
 var n int64 = 0</br>
 
 var n uint = 0</br>
-----------------------------
 var n uint8 = 0</br>
 var n uint16 = 0</br>
 var n uint32 = 0</br>
