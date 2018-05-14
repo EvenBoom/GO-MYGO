@@ -41,3 +41,13 @@ var n uint8 = 0</br>
 var n uint16 = 0</br>
 var n uint32 = 0</br>
 var n uint64 = 0</br>
+## float
+### 分类
+float32</br>
+float64</br>
+### 声明
+var f float32</br>
+var f float64</br>
+### 初始化
+var f float64 = 0 or f:=0.0</br>
+var f float32 =0</br>
