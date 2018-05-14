@@ -1,7 +1,7 @@
 # 基础类型（base-type）
 ## 目录（Catalog）
 1.[string](https://github.com/EvenBoom/GO-MYGO/blob/master/base-type/README.md#%E5%88%9D%E5%A7%8B%E5%8C%96)
-2.[int]
+2.[int](https://github.com/EvenBoom/GO-MYGO/blob/master/base-type/README.md#int)
 ## string
 ### 声明
 var s string
@@ -31,7 +31,7 @@ var n uint16</br>
 var n uint32</br>
 var n uint64</br>
 ### 初始化
-var n int = 0&nbsp;&nbsp;&nbsp;or n:=0</br>
+var n int = 0 or n:=0</br>
 ----------------------------
 var n int8 = 0</br>
 var n int16 = 0</br>
