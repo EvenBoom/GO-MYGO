@@ -1,7 +1,7 @@
 # 基础类型（base-type）
 ## 目录（Catalog）
-1.[string](https://github.com/EvenBoom/GO-MYGO/blob/master/base-type/README.md#%E5%88%9D%E5%A7%8B%E5%8C%96)
-2.[int](https://github.com/EvenBoom/GO-MYGO/blob/master/base-type/README.md#int)
+1.[string](https://github.com/EvenBoom/GO-MYGO/blob/master/base-type/README.md#%E5%88%9D%E5%A7%8B%E5%8C%96)</br>
+2.[int](https://github.com/EvenBoom/GO-MYGO/blob/master/base-type/README.md#int)</br>
 ## string
 ### 声明
 var s string
