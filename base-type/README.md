@@ -23,6 +23,7 @@ int
 3.var n int16</br>
 4.var n int32</br>
 5.var n int64</br>
+
 unt
 -----------------------------------
 1.var n uint</br>
@@ -38,6 +39,7 @@ int
 3.var n int16 = 0</br>
 4.var n int32 = 0</br>
 5.var n int64 = 0</br>
+
 uint
 -----------------------------------
 1.var n uint = 0</br>
