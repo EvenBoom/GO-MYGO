@@ -6,4 +6,4 @@ var s string
 s="init"
 ### 声明并初始化
 1.var s string = "init"</br>
-2.s:="init"
+2.s := "init"
