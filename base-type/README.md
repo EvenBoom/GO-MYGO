@@ -5,5 +5,5 @@ var s string
 ### 初始化
 s="init"
 ### 声明并初始化
-1.var s string = "init"
+1.var s string = "init"</br>
 2.s:="init"
