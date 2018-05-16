@@ -6,4 +6,4 @@ GO的学习与分享（STUDY AND SHARE GO）</br>
 ## 目录（Catalog）
 1.[基础类型](https://github.com/EvenBoom/GO-MYGO/tree/master/base-type)</br>
 2.[结构体](https://github.com/EvenBoom/GO-MYGO/tree/master/struct)</br>
-3.[指针](https://github.com/EvenBoom/GO-MYGO/tree/master/struct)</br>
+3.[指针](https://github.com/EvenBoom/GO-MYGO/tree/master/pointer)</br>
