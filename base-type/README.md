@@ -1,8 +1,8 @@
 # 基础类型（Base-type）
 ## 目录（Catalog）
-1.[string](https://github.com/EvenBoom/GO-MYGO/blob/master/base-type#string)</br>
-2.[int](https://github.com/EvenBoom/GO-MYGO/blob/master/base-type#int)</br>
-3.[float](https://github.com/EvenBoom/GO-MYGO/blob/master/base-type#float)</br>
+1.[string](#string)</br>
+2.[int](#int)</br>
+3.[float](#float)</br>
 ## string
 ### 声明（Declaration）
 ```
