@@ -65,7 +65,7 @@ var n uint64 = 0
 var f float32
 var f float64
 ```
-### 初始化(Initialization)
+### 初始化（Initialization）
 ```
 var f float64 = 0 // f:=0.0
 var f float32 = 0
