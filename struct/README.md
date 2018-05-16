@@ -11,17 +11,21 @@ type person struct {
 	name      string
 }
 ```
-## 声明
+## 声明（Declaration）
 ```
 var p Person
 ```
-## 初始化
+## 初始化（Initialization）
 ```
 p := person{
 	name: "goer",
 }
+
+var p = person{
+	name: "goer",
+}
 ```
-## 引用
+## 引用（Use）
 ```
 fmt.Println(p.name)
 ```
