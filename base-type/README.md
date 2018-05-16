@@ -12,7 +12,7 @@ var s string
 ```
 var s string = "init" // s := "init"
 ```
-1.## int
+## int
 ### 分类（Type）
 1.int（有符号,长度取决于CPU,至少32位）</br>
 2.int8,int16,int32,int64（有符号,固定长度）</br>
@@ -20,7 +20,6 @@ var s string = "init" // s := "init"
 4.uint8,uint16,uint32.uint64（无符号，固定长度）</br>
 ### 声明（Declaration）
 int
------------------------------------
 ```
 var n int
 var n int8
@@ -29,7 +28,6 @@ var n int32
 var n int64
 ```
 unt
------------------------------------
 ```
 var n uint
 var n uint8
@@ -39,7 +37,6 @@ var n uint64
 ```
 ### 初始化（Initialization）
 int
------------------------------------
 ```
 var n int = 0 // n:=0
 var n int8 = 0
@@ -48,7 +45,6 @@ var n int32 = 0
 var n int64 = 0
 ```
 uint
------------------------------------
 ```
 var n uint = 0
 var n uint8 = 0
