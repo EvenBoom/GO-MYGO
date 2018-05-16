@@ -12,7 +12,7 @@ var s string
 ```
 var s string = "init" // s := "init"
 ```
-## int
+1.## int
 ### 分类（Type）
 1.int（有符号,长度取决于CPU,至少32位）</br>
 2.int8,int16,int32,int64（有符号,固定长度）</br>
