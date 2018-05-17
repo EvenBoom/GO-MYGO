@@ -9,7 +9,7 @@ func f(){
   
 }
 ```
-## 参数（Params）
+## 参数（Param）
 ```
 //一个参数
 func f(n int){
