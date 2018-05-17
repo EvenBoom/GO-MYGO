@@ -3,7 +3,7 @@
 1.[条件语句](#条件语句condition)</br>
 2.[循环语句](#循环语句loop)</br>
 ## 条件语句（Condition）
-1.if
+1.if</br>
 ```
 status:=0
 if status==0 {
@@ -29,13 +29,17 @@ switch status {
 }
 ```
 ## 循环语句（Loop）
-go的循环只有for
+go的循环只有for</br>
 ```
 //普通循环
-for i:=0;i<100;i++{
+for i:=0; i<100; i++ {
   fmt.Println(i)
 }
 
 //遍历
-
+```
+for i, v := range nums{
+  fmt.Println(i)//索引
+  fmt.Println(v)//值
+}
 ```
