@@ -15,4 +15,4 @@ GO的学习与分享（STUDY AND SHARE GO）</br>
 2.[结构体](struct)</br>
 3.[指针](pointer)</br>
 4.[函数](func)</br>
-5.[流程控制](controller)</br>
+5.[流程控制](control)</br>
