@@ -14,3 +14,4 @@ GO的学习与分享（STUDY AND SHARE GO）</br>
 1.[基础类型](base-type)</br>
 2.[结构体](struct)</br>
 3.[指针](pointer)</br>
+4.[函数](func)<br>
