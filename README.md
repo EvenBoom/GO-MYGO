@@ -16,3 +16,4 @@ GO的学习与分享（STUDY AND SHARE GO）</br>
 3.[指针](pointer)</br>
 4.[函数](func)</br>
 5.[流程控制](control)</br>
+6.[接口](interface)</br>
