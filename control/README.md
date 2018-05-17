@@ -37,7 +37,6 @@ for i:=0; i<100; i++ {
 }
 
 //遍历
-```
 for i, v := range nums{
   fmt.Println(i)//索引
   fmt.Println(v)//值
