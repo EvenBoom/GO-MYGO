@@ -3,6 +3,7 @@ GO的学习与分享（STUDY AND SHARE GO）</br>
 ## 前言（Preface）
 作者前身是JAVAER，现在是GOPHER。（The author's predecessor is javer, and now it's gopher.）</br>
 一起学习和分享GO技术吧！（Learn and share GO technology together!）</br>
+学习时一定要注意GO的版本差异！（Be sure to pay attention to the version difference of GO in learning!）</br>
 ## 目标（Target）
 1.熟悉GO语法，能开发WEB（2018）</br>
 2.深入理解GO的设计，阅读GO源码（2019）</br>
