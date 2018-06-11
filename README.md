@@ -12,22 +12,16 @@ GO的学习与分享（STUDY AND SHARE GO）</br>
 1.莫让自己的内心如怪物般躁动，无法掌控自己内心的人，将无法掌控自己的生活</br>
 2.从破坏中创建稳固，而不是创建后轻易被破坏</br>
 ## 目录（Catalog）
-1.[基础类型](base-type)</br>
-2.[数组](array)</br>
-3.[切片](slice)</br>
-4.[映射](map)</br>
-5.[结构体](struct)</br>
-6.[指针](pointer)</br>
-7.[函数](func)</br>
-8.[流程控制](control)</br>
-9.[接口](interface)</br>
 <table border="1">
   <tr>
-    <th>Month</th>
-    <th>Savings</th>
-  </tr>
-  <tr>
-    <td>January</td>
-    <td>$100</td>
+    <td>1.[基础类型](base-type)</td>
+    <td>2.[数组](array)</td>
+    <td>3.[切片](slice)</td>
+    <td>4.[映射](map)</td>
+    <td>5.[结构体](struct)</td>
+    <td>6.[指针](pointer)</td>
+    <td>7.[函数](func)</td>
+    <td>8.[流程控制](control)</td>
+    <td>9.[接口](interface)</td>
   </tr>
 </table>
