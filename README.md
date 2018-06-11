@@ -14,14 +14,14 @@ GO的学习与分享（STUDY AND SHARE GO）</br>
 ## 目录（Catalog）
 <table>
   <tr>
-    <td>1.<a href="base-type">基础类型</a></td>
-    <td>2.<a href="array">数组</a></td>
-    <td>3.<a href="slice">切片</a></td>
-    <td>4.<a href="map">映射</a></td>
-    <td>5.<a href="struct">结构体</a></td>
-    <td>6.<a href="pointer">指针</a></td>
-    <td>7.<a href="func">函数</a></td>
-    <td>8.<a href="control">流程控制</a></td>
-    <td>9.<a href="interface">接口</a></td>
+    <td><a href="base-type">基础类型</a></td>
+    <td><a href="array">数组</a></td>
+    <td><a href="slice">切片</a></td>
+    <td><a href="map">映射</a></td>
+    <td><a href="struct">结构体</a></td>
+    <td><a href="pointer">指针</a></td>
+    <td><a href="func">函数</a></td>
+    <td><a href="control">流程控制</a></td>
+    <td><a href="interface">接口</a></td>
   </tr>
 </table>
