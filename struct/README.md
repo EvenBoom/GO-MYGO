@@ -31,7 +31,7 @@ var p = person{
 fmt.Println(p.name)
 ```
 ## 继承（Inheritance）
-继承既继承了字段，同时也继承了方法，另继承方法需要接受者（方法名字前面括号的内容）
+继承既继承了字段，同时也继承了方法，另继承方法需要接收者（方法名字前面括号的内容）
 ```
 type mystruct1 struct {
 	s string
