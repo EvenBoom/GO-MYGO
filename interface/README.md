@@ -14,7 +14,7 @@ type myInterface interface {
 }
 ```
 ## 实现（Implement）
-实现接口就是实现接口里面的所有方法
+实现接口就是实现接口里面的所有方法，和继承方法一样，实现方法需要接受者（方法名字前面括号的内容）
 ```
 type myInterface interface {
 	myfunc1() string
