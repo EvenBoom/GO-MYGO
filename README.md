@@ -21,8 +21,13 @@ GO的学习与分享（STUDY AND SHARE GO）</br>
 7.[函数](func)</br>
 8.[流程控制](control)</br>
 9.[接口](interface)</br>
-|Tables         | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+<table border="1">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
