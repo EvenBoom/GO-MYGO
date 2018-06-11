@@ -30,7 +30,7 @@ var p = person{
 ```
 fmt.Println(p.name)
 ```
-## 继承（Inherit）
+## 继承（Inheritance）
 继承既继承了字段，同时也继承了方法
 ```
 type mystruct1 struct {
