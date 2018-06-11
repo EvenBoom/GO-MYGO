@@ -4,7 +4,7 @@
 2.[声明](#声明declaration)</br>
 3.[初始化](#初始化initialization)</br>
 4.[使用](#使用use)</br>
-5.[继承](#继承inherit)
+5.[继承](#继承Inherit)
 ## 定义类型（Def-type）
 ```
 type person struct {
@@ -30,7 +30,7 @@ var p = person{
 ```
 fmt.Println(p.name)
 ```
-## 继承（inherit）
+## 继承（Inherit）
 继承既继承了字段，同时也继承了方法
 ```
 type mystruct1 struct {
