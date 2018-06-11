@@ -39,7 +39,7 @@ var mi myInterface = new(mystruct1)
 var mi myInterface = new(mystruct2)
 ```
 ## 空接口（Nil-interface）
-空接口里面没有有方法，所以空接口会被所有对象实现，所以空接口被经常用来表示任何类型，最经典的例子Json
+空接口里面没有方法，所以空接口会被所有对象实现，因此空接口被经常用来表示任何类型，最经典的例子Json
 ```
 var myJson map[string]interface{}
 ```
