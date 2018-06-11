@@ -13,8 +13,11 @@ GO的学习与分享（STUDY AND SHARE GO）</br>
 2.从破坏中创建稳固，而不是创建后轻易被破坏</br>
 ## 目录（Catalog）
 1.[基础类型](base-type)</br>
-2.[结构体](struct)</br>
-3.[指针](pointer)</br>
-4.[函数](func)</br>
-5.[流程控制](control)</br>
-6.[接口](interface)</br>
+2.[数组](array)</br>
+3.[切片](slice)</br>
+4.[映射](map)</br>
+5.[结构体](struct)</br>
+6.[指针](pointer)</br>
+7.[函数](func)</br>
+8.[流程控制](control)</br>
+9.[接口](interface)</br>
