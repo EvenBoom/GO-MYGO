@@ -12,7 +12,7 @@ GO的学习与分享（STUDY AND SHARE GO）</br>
 1.莫让自己的内心如怪物般躁动，无法掌控自己内心的人，将无法掌控自己的生活</br>
 2.从破坏中创建稳固，而不是创建后轻易被破坏</br>
 ## 目录（Catalog）
-<table border="1">
+<table>
   <tr>
     <td>1.<a href="base-type">基础类型</a></td>
     <td>2.<a href="array">数组</a></td>
