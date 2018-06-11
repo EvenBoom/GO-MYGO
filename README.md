@@ -14,7 +14,7 @@ GO的学习与分享（STUDY AND SHARE GO）</br>
 ## 目录（Catalog）
 <table border="1">
   <tr>
-    <td>1.[基础类型](base-type)</td>
+    <td>1.<a href="base-type">基础类型](base-type)</a></td>
     <td>2.[数组](array)</td>
     <td>3.[切片](slice)</td>
     <td>4.[映射](map)</td>
