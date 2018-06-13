@@ -1,6 +1,6 @@
 # 映射（Map）
 ## 目录（Catalog）
-1.[简介](#简介brief-intruduction)</br>
+1.[简介](#简介brief-introduction)</br>
 2.[声明](#声明declaration)</br>
 3.[初始化](#初始化initialization)</br>
 4.[使用](#使用use)</br>
