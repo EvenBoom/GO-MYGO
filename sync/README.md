@@ -5,9 +5,10 @@ sync是一个同步包，里面定义了与同步相关的一些操作
 1.[WaitGroup](#waitgroup)</br>
 2.[Pool](#pool)</br>
 3.[Once](#once)</br>
+4
 ## WaitGroup
 估计大家刚接触golang时都会遇到一个奇怪的问题，就是在main函数中使用goroutine没反应，这是因为协程还没走完，主线程就结束了</br>
-WaitGroup就解决这个问题，WaitGroup可以阻塞主线程直到所有协程走完，主要三个方法Wait()，Add(int)和Done()
+WaitGroup就解决这个问题，WaitGroup可以阻塞主线程直到所有协程走完，主要三个方法Wait()，Add(int)和Done()，需要注意的是WaitGroup是全局的，唯一的
 ```
 package main
 
