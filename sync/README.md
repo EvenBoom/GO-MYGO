@@ -6,6 +6,7 @@ sync是一个同步包，里面定义了与同步相关的一些操作
 2.[Pool](#pool)</br>
 3.[Once](#once)</br>
 4.[Mutex](#mutex)</br>
+5.[RWMutex](#rwmutex)
 ## WaitGroup
 估计大家刚接触golang时都会遇到一个奇怪的问题，就是在main函数中使用goroutine没反应，这是因为协程还没走完，主线程就结束了</br>
 WaitGroup就解决这个问题，WaitGroup可以阻塞主线程直到所有协程走完，主要三个方法Wait()，Add(int)和Done()
@@ -121,6 +122,78 @@ func increase() {
 	fmt.Println(i)
 	i++
 	l.Unlock()
+	wg.Done()
+}
+
+```
+## RWMutex
+RWMutex读写锁，与输入输出流无关，不要混淆，获取了写锁的线程会排斥其它加了读或者写的线程，获取了读锁的线程会排斥其它加了写锁的线程（实际生产中要注意读锁还没解锁又被另一个读锁锁住了，导致写锁一直无法获取直至读锁全部解锁后才能获取的问题，这个发生概率还是很大的），下面的例子如果start到end中都没有出现一个锁的内容就表示和另一个锁是互斥的
+```
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+var wg sync.WaitGroup
+var l sync.RWMutex
+var m sync.Mutex//加互斥锁是为了测试互斥锁和读写锁是不会相互影响的
+
+func main() {
+	wg.Add(24)
+	go readS("Ra")
+	go writeS("Wa")
+	go readS("Rb")
+	go writeS("Wb")
+	go readS("Rc")
+	go writeS("Wc")
+	go readS("Rd")
+	go writeS("Wd")
+	go mutex("Ma")
+	go mutex("Mb")
+	go mutex("Mc")
+	go mutex("Md")
+	go readS("Re")
+	go readS("Rf")
+	go readS("Rg")
+	go readS("Rh")
+	go writeS("We")
+	go writeS("Wf")
+	go writeS("Wg")
+	go writeS("Wh")
+	go mutex("Me")
+	go mutex("Mf")
+	go mutex("Mg")
+	go mutex("Mh")
+	wg.Wait()
+}
+
+func readS(s string) {
+
+	l.RLock()
+	fmt.Println("read start")
+	fmt.Println(s)
+	fmt.Println("read end")
+	l.RUnlock()
+	wg.Done()
+}
+
+func writeS(s string) {
+	l.Lock()
+	fmt.Println("write start")
+	fmt.Println(s)
+	fmt.Println("write end")
+	l.Unlock()
+	wg.Done()
+}
+
+func mutex(s string) {
+	m.Lock()
+	fmt.Println("m start")
+	fmt.Println(s)
+	fmt.Println("m end")
+	m.Unlock()
 	wg.Done()
 }
 
