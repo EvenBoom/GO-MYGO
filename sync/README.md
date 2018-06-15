@@ -5,10 +5,10 @@ sync是一个同步包，里面定义了与同步相关的一些操作
 1.[WaitGroup](#waitgroup)</br>
 2.[Pool](#pool)</br>
 3.[Once](#once)</br>
-4
+4.[Mutex](#mutex)</br>
 ## WaitGroup
 估计大家刚接触golang时都会遇到一个奇怪的问题，就是在main函数中使用goroutine没反应，这是因为协程还没走完，主线程就结束了</br>
-WaitGroup就解决这个问题，WaitGroup可以阻塞主线程直到所有协程走完，主要三个方法Wait()，Add(int)和Done()，需要注意的是WaitGroup是全局的，唯一的
+WaitGroup就解决这个问题，WaitGroup可以阻塞主线程直到所有协程走完，主要三个方法Wait()，Add(int)和Done()
 ```
 package main
 
@@ -86,4 +86,42 @@ var once sync.Once
 func f() {
 	fmt.Println("I just run once!")
 }
+```
+## Mutex
+sync.Mutex是一个互斥锁，一个锁只允许其中一个线程进入，直到解锁后才能允许其它线程获得锁，继承了sync.Locker接口，有Lock()方法和Unlock()方法
+```
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+var wg sync.WaitGroup
+var l sync.Mutex
+
+func main() {
+	wg.Add(8)
+	go increase()
+	go increase()
+	go increase()
+	go increase()
+	go increase()
+	go increase()
+	go increase()
+	go increase()
+	wg.Wait()
+}
+
+var i int
+//加锁后结果0,1,2,3,4,5,6,7
+//不加锁的结果每次运行不太一样
+func increase() {
+	l.Lock()
+	fmt.Println(i)
+	i++
+	l.Unlock()
+	wg.Done()
+}
+
 ```
