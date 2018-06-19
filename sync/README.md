@@ -6,7 +6,8 @@ sync是一个同步包，里面定义了与同步相关的一些操作
 2.[Pool](#pool)</br>
 3.[Once](#once)</br>
 4.[Mutex](#mutex)</br>
-5.[RWMutex](#rwmutex)
+5.[RWMutex](#rwmutex)</br>
+6.[Cond](#Cond)</br>
 ## WaitGroup
 估计大家刚接触golang时都会遇到一个奇怪的问题，就是在main函数中使用goroutine没反应，这是因为协程还没走完，主线程就结束了</br>
 WaitGroup就解决这个问题，WaitGroup可以阻塞主线程直到所有协程走完，主要三个方法Wait()，Add(int)和Done()
@@ -22,7 +23,7 @@ import (
 var wg sync.WaitGroup
 
 func main() {
-	wg.Add(1)//必须在主线程中添加，在协程中添加会出现莫名的问题
+	wg.Add(1)//Add和Wait函数必须在同一协程，否则会出现莫名的问题
 	go hello()
 	wg.Wait()//阻塞主线程，直到wg里的值为0
 	fmt.Println("done!")
@@ -197,4 +198,54 @@ func mutex(s string) {
 	wg.Done()
 }
 
+```
+## Cond
+sync.Cond是用来阻塞协程，唤醒协程的一个struct，sync.NewCond方法是创建一个sync.Cond类，参数是锁的地址，即需要加&符号。Wait方法是阻塞协程并等待唤醒，Signal是唤醒一个协程，Broadcast是全部唤醒。</br>
+1.生产者-消费者例子
+```
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+var mu sync.Mutex
+var cond *sync.Cond
+var num int
+var wg sync.WaitGroup
+
+func main() {
+	num = 5
+	cond = sync.NewCond(&mu)
+	for i := 0; i < 100; i++ {
+		wg.Add(2)
+		go minusOne()
+		go addOne()
+	}
+	wg.Wait()
+	fmt.Println(num)
+}
+//消费者
+func minusOne() {
+	cond.L.Lock()
+	for num <= 0 {
+		cond.Wait()
+	}
+	num--
+	cond.L.Unlock()
+	cond.Broadcast()
+	wg.Done()
+}
+//生产者
+func addOne() {
+	cond.L.Lock()
+	for num >= 10 {
+		cond.Wait()
+	}
+	num++
+	cond.L.Unlock()
+	cond.Broadcast()
+	wg.Done()
+}
 ```
