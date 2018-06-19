@@ -22,7 +22,7 @@ import (
 var wg sync.WaitGroup
 
 func main() {
-	wg.Add(1)
+	wg.Add(1)//必须在主线程中添加，在协程中添加会出现莫名的问题
 	go hello()
 	wg.Wait()//阻塞主线程，直到wg里的值为0
 	fmt.Println("done!")
