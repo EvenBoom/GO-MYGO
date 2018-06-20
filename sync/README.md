@@ -8,6 +8,7 @@ sync是一个同步包，里面定义了与同步相关的一些操作
 4.[Mutex](#mutex)</br>
 5.[RWMutex](#rwmutex)</br>
 6.[Cond](#cond)</br>
+7.[Map](#map)</br>
 ## WaitGroup
 估计大家刚接触golang时都会遇到一个奇怪的问题，就是在main函数中使用goroutine没反应，这是因为协程还没走完，主线程就结束了</br>
 WaitGroup就解决这个问题，WaitGroup可以阻塞主线程直到所有协程走完，主要三个方法Wait()，Add(int)和Done()
@@ -249,3 +250,5 @@ func addOne() {
 	wg.Done()
 }
 ```
+## Map
+因为map是非线程安全的，所以sync.Map提供了线程安全的解决方法，里面的方法很简单，就不列举出来了
