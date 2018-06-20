@@ -4,7 +4,8 @@
 2.[定义](#定义def)</br>
 3.[实现](#实现implement)</br>
 4.[多态](#多态polymorphism)</br>
-4.[空接口](#空接口nil-interface)</br>
+5.[空接口](#空接口nil-interface)</br>
+6.[类型断言](#类型断言type-assertions)
 ## 简介（Brief-introduction）
 接口是一堆方法的集合
 ## 定义（Def）
@@ -43,3 +44,5 @@ var mi myInterface = new(mystruct2)
 ```
 var myJson map[string]interface{}
 ```
+## 类型断言(Type-assertions)
+类型断言就是接口与其他类型的转换。格式是interface.(type)
