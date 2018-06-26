@@ -36,7 +36,7 @@ func block(c chan bool) {
 	fmt.Println(result)
 }
 ```
-## Ranga-and-close
+## Range-and-close
 range可以不断让信道接收数据，直到信道被关闭。</br>
 close可以用来关闭信道。</br>
 注意：只有发送者可以关闭信道，因为关闭了信道后若继续发送数据会引发恐慌。</br>
