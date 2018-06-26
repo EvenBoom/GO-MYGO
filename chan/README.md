@@ -5,8 +5,9 @@
 3.[初始化](#初始化initialization)</br>
 4.[缓冲信道](#缓冲信道buffered-channel)</br>
 5.[Range-and-close](#range-and-close)</br>
+6.[Select](#select)</br>
 ## 简介（Brief-introduction）
-信道就是通道，官方翻译是信道。chan可以用来阻塞线程，用来代替锁。
+信道就是通道，官方翻译是信道。chan可以用来阻塞线程，用来代替锁，官方建议用chan来替代锁。
 ## 声明（Declaration）
 ```
 var cs chan string//双向信道
@@ -55,4 +56,38 @@ func block(c chan bool) {
 		fmt.Println(result)
 	}
 }
+```
+## Select
+select语句可以解决一个协程里多个chan等待的处理，都准备好会随机选一个执行。
+```
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	c1 := make(chan string, 10)
+	c2 := make(chan string, 10)
+	go block(c1, c2)
+
+	c1 <- "I am c1!"
+	c2 <- "I am c2!"
+	for {
+
+	}
+}
+
+func block(c1, c2 chan string) {
+	var s string
+	for {
+		select {
+		case s = <-c1:
+			fmt.Println(s)
+		case s = <-c2:
+			fmt.Println(s)
+		}
+	}
+}
+
 ```
