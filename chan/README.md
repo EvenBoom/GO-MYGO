@@ -4,7 +4,7 @@
 2.[声明](#声明declaration)</br>
 3.[初始化](#初始化initialization)</br>
 4.[缓冲信道](#缓冲信道buffered-channel)</br>
-5.[Range And Close](#range-and-close)</br>
+5.[Range-and-close](#range-and-close)</br>
 ## 简介（Brief-introduction）
 信道就是通道，官方翻译是信道。chan可以用来阻塞线程，用来代替锁。
 ## 声明（Declaration）
@@ -36,4 +36,23 @@ func block(c chan bool) {
 	fmt.Println(result)
 }
 ```
-## Range And Close
+## Rangea-and-close
+range可以不断让信道接收数据，直到信道被关闭。</br>
+close可以用来关闭信道。</br>
+注意：只有发送者可以关闭信道，因为关闭了信道后若继续发送数据会引发恐慌。</br>
+```
+c := make(chan bool, 2)
+go block(c)
+c <- true
+c <- true
+c <- true
+c <- true
+close(c)//通常情况下不用关闭，这里关闭是为了终止block函数里的range循环
+c <- true//关闭后发送数据会引发恐慌
+
+func block(c chan bool) {
+	for result := range c {
+		fmt.Println(result)
+	}
+}
+```
