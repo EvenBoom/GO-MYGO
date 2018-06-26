@@ -60,23 +60,13 @@ func block(c chan bool) {
 ## Select
 select语句可以解决一个协程里多个chan等待的处理，都准备好会随机选一个执行。
 ```
-package main
+c1 := make(chan string, 10)
+c2 := make(chan string, 10)
+go block(c1, c2)
 
-import (
-	"fmt"
-)
+c1 <- "I am c1!"
+c2 <- "I am c2!"
 
-func main() {
-	c1 := make(chan string, 10)
-	c2 := make(chan string, 10)
-	go block(c1, c2)
-
-	c1 <- "I am c1!"
-	c2 <- "I am c2!"
-	for {
-
-	}
-}
 
 func block(c1, c2 chan string) {
 	var s string
