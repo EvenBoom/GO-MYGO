@@ -3,8 +3,8 @@
 1.[简介](#简介brief-introduction)</br>
 2.[声明](#声明declaration)</br>
 3.[初始化](#初始化initialization)</br>
-4.[缓冲信道](#缓冲信道buffered-channel)
-5.[Range And Close](#range-and-close)
+4.[缓冲信道](#缓冲信道buffered-channel)</br>
+5.[Range And Close](#range-and-close)</br>
 ## 简介（Brief-introduction）
 信道就是通道，官方翻译是信道。chan可以用来阻塞线程，用来代替锁。
 ## 声明（Declaration）
