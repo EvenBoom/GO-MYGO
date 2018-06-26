@@ -1,6 +1,6 @@
 # 信道（chan）
 ## 目录（Catalog）
-1.[简介](#简介briefintroduction)</br>
+1.[简介](#简介brief-introduction)</br>
 2.[声明](#声明declaration)</br>
 3.[初始化](#初始化initialization)</br>
 ## 简介（Brief-introduction）
