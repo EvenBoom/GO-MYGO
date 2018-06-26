@@ -76,8 +76,29 @@ func block(c1, c2 chan string) {
 			fmt.Println(s)
 		case s = <-c2:
 			fmt.Println(s)
+		default://当所有chan阻塞时执行
+			fmt.Println("Not ready!")
+			time.Sleep(100*time.Millisecond)
 		}
 	}
+}
+//跳出for循环中的select，只能用break和goto
+func block(c1, c2 chan string) {
+	var s string
+breakPoint://break只能在for前面，在break与for之间不能有任何其它代码，如果此处用goto，会进入无限循环
+	for {
+		select {
+		case s = <-c1:
+			fmt.Println(s)
+		case s = <-c2:
+			fmt.Println(s)
+		default://当所有chan阻塞时执行
+			fmt.Println("Not ready!")
+			break breakPoint
+			//goto gotoPoint
+		}
+	}
+//gotoPoint: //和其它语言的goto一样用法
 }
 
 ```
