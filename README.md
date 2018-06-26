@@ -24,7 +24,7 @@ GO的学习与分享（STUDY AND SHARE GO）</br>
     <td><a href="control">流程控制</a></td>
     <td><a href="interface">接口</a></td>
     <td><a href="goroutine">协程</a></td>
-    <td><a href="chan">通道</a></td>
+    <td><a href="chan">信道</a></td>
     <td><a href="sync">sync</a></td>
   </tr>
 </table>
