@@ -33,5 +33,5 @@ type Handler interface {
 	ServeHTTP(ResponseWriter, *Request)
 }
 ```
-http.Handle和http.HandleFunc这两个函数都是匹配路由和处理函数，并且都实现了ServeHTTP函数以及第1个参数都是路由，不过http.Handle第2个参数是Handler，http.Handler第2个参数是func(ResponseWriter, *Request)。
+http.Handle和http.HandleFunc这两个函数都是匹配路由和处理函数，并且第1个参数都是路由，不过http.Handle第2个参数是Handler，http.Handler第2个参数是func(ResponseWriter, *Request)。
 
