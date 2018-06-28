@@ -26,3 +26,12 @@ func main() {
 }
 
 ```
+## Handler
+下面是golang的源码，从中可以看出Handler是一个接口，仅声明了一个函数ServeHTTP，http处理函数是通过实现Handler来完成的。
+```
+type Handler interface {
+	ServeHTTP(ResponseWriter, *Request)
+}
+```
+http.Handle和http.HandleFunc这两个函数都是匹配路由和处理函数，第1个参数都是路由，不过http.Handle第2个参数是Handler，http.Handler第2个参数是func(ResponseWriter, *Request)。
+
