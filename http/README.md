@@ -69,7 +69,9 @@ import (
 func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/post", func(w http.ResponseWriter, r *http.Request) {
-		v := r.FormValue("key")
+		v := r.FormValue("key")//获取url参数和body参数，若url参数和body参数key相同，优先获取body的参数
+		//v := r.PostFormValue("key")//获取body参数，仅限POST，PUT，PATCH
+		//v := r.URL.Query().Get("key")//获取url参数
 		w.Write([]byte(v))
 	})
 	http.ListenAndServe(":8080", mux)
@@ -81,5 +83,7 @@ func (h hello) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	h(w, r)
 }
 ```
-## 
+注意：若要DELETE方法也能获取到body参数，必须修改golang源码，需要修改request.go中的ParseForm函数，在r.Method==...后面加上||r.Method=="DELETE"
+## 其它
+这里有篇[文章](https://studygolang.com/articles/2680)可以看下，有时需要查询某些函数用法可以参考这篇文章
 
