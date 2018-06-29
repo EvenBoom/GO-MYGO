@@ -34,4 +34,7 @@ type Handler interface {
 }
 ```
 http.Handle和http.HandleFunc这两个函数都是匹配路由和处理函数，并且第1个参数都是路由，不过http.Handle第2个参数是Handler，http.Handler第2个参数是func(ResponseWriter, *Request)。
+## ServeMux
+ServeMux是匹配路由和Handler的管理器，本质也是一个Handler。</br>
+
 
