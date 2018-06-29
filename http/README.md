@@ -36,5 +36,27 @@ type Handler interface {
 http.Handle和http.HandleFunc这两个函数都是匹配路由和处理函数，并且第1个参数都是路由，不过http.Handle第2个参数是Handler，http.Handler第2个参数是func(ResponseWriter, *Request)。
 ## ServeMux
 ServeMux是匹配路由和Handler的管理器，本质也是一个Handler。</br>
+在我们使用http.ListenAndServe函数时，第二个参数往往是nil，这样我们就会使用默认的ServeMux，即DefaultServeMux。</br>
+```
+package main
 
+import (
+	"net/http"
+)
+
+func main() {
+	mux := http.NewServeMux()
+	mux.Handle("/hello", hello(func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte("Hello World!!!"))
+	}))
+	http.ListenAndServe(":8080", mux)
+}
+
+type hello func(w http.ResponseWriter, r *http.Request)
+
+func (h hello) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	h(w, r)
+}
+```
+## 
 
