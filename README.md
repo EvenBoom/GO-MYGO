@@ -26,6 +26,8 @@ GO的学习与分享（STUDY AND SHARE GO）</br>
     <td><a href="goroutine">协程</a></td>
     <td><a href="chan">信道</a></td>
     <td><a href="rpc">远程调用</a></td>
+  </tr>
+  <tr>
     <td><a href="sync">sync</a></td>
     <td><a href="http">http</a></td>
   </tr>
