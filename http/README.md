@@ -58,5 +58,5 @@ func (h hello) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	h(w, r)
 }
 ```
-## 
+## 获取post参数
 
