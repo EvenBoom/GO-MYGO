@@ -58,5 +58,28 @@ func (h hello) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	h(w, r)
 }
 ```
-## 获取post参数
+## 获取请求参数
+```
+package main
+
+import (
+	"net/http"
+)
+
+func main() {
+	mux := http.NewServeMux()
+	mux.HandleFunc("/post", func(w http.ResponseWriter, r *http.Request) {
+		v := r.FormValue("key")
+		w.Write([]byte(v))
+	})
+	http.ListenAndServe(":8080", mux)
+}
+
+type hello func(w http.ResponseWriter, r *http.Request)
+
+func (h hello) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	h(w, r)
+}
+```
+## 
 
