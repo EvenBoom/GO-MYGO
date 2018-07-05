@@ -86,6 +86,44 @@ func (h hello) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 注意：若要DELETE方法也能获取到body参数，必须修改golang源码，需要修改request.go中的ParseForm函数，在r.Method==...后面加上||r.Method=="DELETE"
 ## 中间件（Middleware）
 ```
+package main
+
+import (
+	"log"
+	"net/http"
+)
+
+func main() {
+	mux := http.NewServeMux()
+	mux1 := middleware1(mux)//中间件第一层
+	mux2 := middleware2(mux1)//中间件第二层
+	mux.HandleFunc("/test1", func(w http.ResponseWriter, req *http.Request) {
+		// io.WriteString(w, "test1")
+		w.Write([]byte("test1"))
+	})
+	mux.HandleFunc("/test2", func(w http.ResponseWriter, req *http.Request) {
+		// io.WriteString(w, "test2")
+		w.Write([]byte("test2"))
+	})
+	log.Fatal(http.ListenAndServe(":8080", mux2))
+}
+
+func middleware1(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, req *http.Request) {
+		w.Write([]byte("before1 "))
+		next.ServeHTTP(w, req)
+		w.Write([]byte(" after1"))
+	})
+}
+
+func middleware2(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, req *http.Request) {
+		w.Write([]byte("before2 "))
+		next.ServeHTTP(w, req)
+		w.Write([]byte(" after2"))
+	})
+}
+
 ```
 ## 其它
 这里有篇[文章](https://studygolang.com/articles/2680)可以看下，有时需要查询某些函数用法可以参考这篇文章
