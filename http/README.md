@@ -84,6 +84,9 @@ func (h hello) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 ```
 注意：若要DELETE方法也能获取到body参数，必须修改golang源码，需要修改request.go中的ParseForm函数，在r.Method==...后面加上||r.Method=="DELETE"
+## 中间件（Middleware）
+```
+```
 ## 其它
 这里有篇[文章](https://studygolang.com/articles/2680)可以看下，有时需要查询某些函数用法可以参考这篇文章
 
