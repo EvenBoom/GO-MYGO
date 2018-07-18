@@ -31,6 +31,6 @@ GO的学习与分享（STUDY AND SHARE GO）</br>
     <td><a href="sync">sync</a></td>
     <td><a href="http">http</a></td>
     <td><a href="test">单元测试</a></td>
-    <td><a href="data-structure">数据结构与算法</td>
+    <td><a href="data-structure">数据结构</a></td>
   </tr>
 </table>
