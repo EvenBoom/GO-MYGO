@@ -24,11 +24,11 @@ GO的学习与分享（STUDY AND SHARE GO）</br>
     <td><a href="func">函数</a></td>
     <td><a href="control">流程控制</a></td>
     <td><a href="interface">接口</a></td>
+    <td><a href="error">错误</a></td>
     <td><a href="goroutine">协程</a></td>
-    <td><a href="chan">信道</a></td>
-    
   </tr>
   <tr>
+    <td><a href="chan">信道</a></td>
     <td><a href="sync">sync</a></td>
     <td><a href="http">http</a></td>
     <td><a href="rpc">远程调用</a></td>
