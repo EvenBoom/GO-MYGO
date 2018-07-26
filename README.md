@@ -15,6 +15,7 @@ GO的学习与分享（STUDY AND SHARE GO）</br>
 <table>
   <tr>
     <td><a href="base-type">基础类型</a></td>
+    <td><a href="const">常量</a></td>
     <td><a href="array">数组</a></td>
     <td><a href="slice">切片</a></td>
     <td><a href="map">映射</a></td>
@@ -25,11 +26,12 @@ GO的学习与分享（STUDY AND SHARE GO）</br>
     <td><a href="interface">接口</a></td>
     <td><a href="goroutine">协程</a></td>
     <td><a href="chan">信道</a></td>
-    <td><a href="rpc">远程调用</a></td>
+    
   </tr>
   <tr>
     <td><a href="sync">sync</a></td>
     <td><a href="http">http</a></td>
+    <td><a href="rpc">远程调用</a></td>
     <td><a href="test">单元测试</a></td>
     <td><a href="data-structure">数据结构</a></td>
   </tr>
