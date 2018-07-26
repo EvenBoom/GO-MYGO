@@ -7,19 +7,19 @@ import (
 	"fmt"
 )
 
-const foo = "foo"
-const bar string = "bar"
+const Foo = "foo"
+const Bar string = "bar"
 const (
-	one   = 1
-	two   = 2
-	three = 3
+	One   = 1
+	Two   = 2
+	Three = 3
 )
 
 func main() {
-	fmt.Println(foo)
-	fmt.Println(bar)
-	fmt.Println(one)
-	fmt.Println(two)
-	fmt.Println(three)
+	fmt.Println(Foo)
+	fmt.Println(Bar)
+	fmt.Println(One)
+	fmt.Println(Two)
+	fmt.Println(Three)
 }
 ```
