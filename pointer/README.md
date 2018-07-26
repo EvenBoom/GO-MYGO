@@ -4,7 +4,7 @@
 2.[声明](#声明declaration)</br>
 3.[初始化](#初始化initialization)</br>
 4.[使用](#使用use)</br>
-5.[指针转化](#transform)</br>
+5.[指针转化](#指针转化transform)</br>
 6.[注意](#注意attention)</br>
 ## 简介（Brief-introduction）
 指针并不存储数据，而是存储数据的内存地址。</br>
